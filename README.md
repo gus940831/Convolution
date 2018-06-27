@@ -47,7 +47,7 @@ def convolve(image, kernel, pad, stride):
     return output
 img = cv.imread('soccer.jpg')
 #kernel = np.ones((5,5),np.float32)/25  ->>averaging blurring kernel
-kernel = np.array([[-1,-1,-1],[-1,8,-1],[-1,-1,-1]]) # 파이썬에서 np를 써서 배열을 만들면 성능이 더 좋아짐
+kernel = np.array([[-1,-1,-1],[-1,10,-1],[-1,-1,-1]]) 
 kernel2 = np.array([[0,-1,0],[-1,5,-1],[0,-1,0]])
 dst = convolve(img,kernel,1,1)
 dst2 = convolve(img,kernel2,100,5)
