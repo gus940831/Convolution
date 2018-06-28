@@ -42,7 +42,8 @@ def convolve(image, kernel, pad, stride):
     output_r = rescale_intensity(output_r, in_range=(0, 255))
     output_r = (output_r * 255).astype("uint8")
     output = cv.merge((output_b,output_g,output_r))
- 
+
+# test here 
   
     return output
 img = cv.imread('soccer.jpg')
@@ -59,3 +60,4 @@ cv.imshow('img3', dst2)
 cv.imshow('img4', dst3)
 cv.waitKey(0)
 cv.destroyAllWindows()
+
